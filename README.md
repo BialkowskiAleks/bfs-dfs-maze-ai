@@ -63,3 +63,5 @@ ruff check .
 ## Najważniejszy wniosek
 
 BFS gwarantuje znalezienie najkrótszej ścieżki w grafie nieważonym, dlatego w problemie labiryntu jest lepszy, gdy najważniejsza jest optymalna długość trasy. DFS również może znaleźć rozwiązanie, ale nie gwarantuje najkrótszej ścieżki, ponieważ eksploruje jedną gałąź grafu możliwie głęboko przed sprawdzeniem innych możliwości.
+
+Projekt gotowy do oddania.
