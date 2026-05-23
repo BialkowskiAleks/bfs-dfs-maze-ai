@@ -3,14 +3,17 @@
 Projekt zaliczeniowy z przedmiotu **Sztuczna Inteligencja**.
 
 Autorzy:
+
 - Jędrzej Chodkowski 30377
 - Aleks Białkowski 3378
+
 
 ## Cel projektu
 
 Celem projektu jest samodzielna implementacja oraz porównanie dwóch algorytmów przeszukiwania grafów: **Breadth-First Search (BFS)** i **Depth-First Search (DFS)**. Algorytmy rozwiązują problem znalezienia ścieżki w labiryncie reprezentowanym jako dwuwymiarowa siatka.
 
 Porównywane są:
+
 - długość znalezionej ścieżki,
 - liczba odwiedzonych pól,
 - czas działania algorytmu.
