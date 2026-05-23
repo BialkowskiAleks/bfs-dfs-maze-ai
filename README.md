@@ -17,7 +17,7 @@ Porównywane są:
 - liczba odwiedzonych pól,
 - czas działania algorytmu.
 
-## Struktura projektu
+## Struktura projektu.
 
 ```text
 src/maze_ai/
