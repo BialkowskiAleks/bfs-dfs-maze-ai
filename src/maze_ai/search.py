@@ -51,7 +51,12 @@ def bfs(maze: Maze) -> SearchResult:
 
         if current == maze.goal:
             elapsed_ms = (perf_counter() - start_time) * 1000
-            return SearchResult("BFS", reconstruct_path(parent, maze.goal), visited_nodes, elapsed_ms)
+            return SearchResult(
+                "BFS", 
+                reconstruct_path(parent, maze.goal), 
+                visited_nodes, 
+                elapsed_ms,
+            )
 
         for neighbor in maze.neighbors(current):
             if neighbor not in parent:
@@ -75,7 +80,12 @@ def dfs(maze: Maze) -> SearchResult:
 
         if current == maze.goal:
             elapsed_ms = (perf_counter() - start_time) * 1000
-            return SearchResult("DFS", reconstruct_path(parent, maze.goal), visited_nodes, elapsed_ms)
+            return SearchResult(
+                "DFS", 
+                reconstruct_path(parent, maze.goal), 
+                visited_nodes, 
+                elapsed_ms,
+            )
 
         # Odwracamy kolejnosc, aby DFS przy stosie zachowywal podobny priorytet sasiadow
         # jak BFS: gora, prawo, dol, lewo.

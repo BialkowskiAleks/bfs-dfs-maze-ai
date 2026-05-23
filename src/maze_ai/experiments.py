@@ -60,10 +60,27 @@ def format_results(results: dict[str, list[SearchResult]]) -> str:
 
 
 def summarize(results: dict[str, list[SearchResult]]) -> str:
-    bfs_lengths = [r.path_length for values in results.values() for r in values if r.algorithm == "BFS" and r.found]
-    dfs_lengths = [r.path_length for values in results.values() for r in values if r.algorithm == "DFS" and r.found]
-    bfs_visited = [r.visited_nodes for values in results.values() for r in values if r.algorithm == "BFS"]
-    dfs_visited = [r.visited_nodes for values in results.values() for r in values if r.algorithm == "DFS"]
+    bfs_lengths = [
+        r.path_length 
+        for values in results.values() 
+        for r in values 
+        if r.algorithm == "BFS" and r.found]
+    
+    dfs_lengths = [
+        r.path_length 
+        for values in results.values() 
+        for r in values 
+        if r.algorithm == "DFS" and r.found]
+    bfs_visited = [
+        r.visited_nodes 
+        for values in results.values() 
+        for r in values 
+        if r.algorithm == "BFS"]
+    dfs_visited = [
+        r.visited_nodes 
+        for values in results.values() 
+        for r in values 
+        if r.algorithm == "DFS"]
 
     return (
         "Srednie wyniki dla labiryntow, w ktorych znaleziono sciezke:\n"

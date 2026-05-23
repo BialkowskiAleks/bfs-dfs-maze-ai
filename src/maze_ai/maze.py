@@ -24,7 +24,7 @@ class Maze:
     goal: Position
 
     @classmethod
-    def from_text(cls, text: str) -> "Maze":
+    def from_text(cls, text: str) -> Maze:
         """Tworzy labirynt z tekstu wielolinijkowego."""
         rows = tuple(line.rstrip("\n") for line in text.strip("\n").splitlines())
         if not rows:
@@ -46,7 +46,12 @@ class Maze:
 
     @staticmethod
     def _find_all(rows: tuple[str, ...], char: str) -> list[Position]:
-        return [(r, c) for r, row in enumerate(rows) for c, value in enumerate(row) if value == char]
+        return [
+            (r, c) 
+            for r, row in enumerate(rows) 
+            for c, value in enumerate(row) 
+            if value == char
+        ]
 
     @property
     def height(self) -> int:
