@@ -21,12 +21,15 @@ Porównywane są:
 ## Struktura projektu
 
 ```text
+
 src/maze_ai/
   maze.py          # model labiryntu
   search.py        # implementacja BFS i DFS
   experiments.py   # przykładowe labirynty i porównanie wyników
   main.py          # uruchomienie programu
+
 tests/
+
   test_maze.py     # testy modelu labiryntu
   test_search.py   # testy algorytmów
 ```
