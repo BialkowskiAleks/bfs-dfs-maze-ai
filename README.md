@@ -36,23 +36,20 @@ tests/
 W repozytorium z projektem uruchom:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate   # Linux/macOS
-# .venv\Scripts\activate    # Windows
-pip install -e .[dev]
-python -m maze_ai.main
+uv sync --all-extras
+uv run python -m maze_ai.main
 ```
 
 ## Uruchomienie testów
 
 ```bash
-pytest
+uv run pytest
 ```
 
 ## Sprawdzenie jakości kodu
 
 ```bash
-ruff check .
+uv run ruff check .
 ```
 
 ## Podział pracy
