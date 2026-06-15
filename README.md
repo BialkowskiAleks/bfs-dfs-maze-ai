@@ -36,23 +36,20 @@ tests/
 W repozytorium z projektem uruchom:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate   # Linux/macOS
-# .venv\Scripts\activate    # Windows
-pip install -e .[dev]
-python -m maze_ai.main
+uv sync --all-extras
+uv run python -m maze_ai.main
 ```
 
 ## Uruchomienie testów
 
 ```bash
-pytest
+uv run pytest
 ```
 
 ## Sprawdzenie jakości kodu
 
 ```bash
-ruff check .
+uv run ruff check .
 ```
 
 ## Podział pracy
@@ -63,3 +60,5 @@ ruff check .
 ## Najważniejszy wniosek
 
 BFS gwarantuje znalezienie najkrótszej ścieżki w grafie nieważonym, dlatego w problemie labiryntu jest lepszy, gdy najważniejsza jest optymalna długość trasy. DFS również może znaleźć rozwiązanie, ale nie gwarantuje najkrótszej ścieżki, ponieważ eksploruje jedną gałąź grafu możliwie głęboko przed sprawdzeniem innych możliwości.
+
+Projekt gotowy do oddania.
